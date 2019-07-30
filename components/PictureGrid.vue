@@ -1,38 +1,12 @@
 <template>
   <div>
     <div class="picture-grid">
-      <PictureCard 
-      image='https://answersafrica.com/wp-content/uploads/2013/04/Africa-4.jpg'
-      :imageDetails="{ name: 'david somebody', location: 'Somewhere in Nigeria' }"
-      />
-      <PictureCard 
-      image='https://melaninterest.com/wp-content/uploads/2018/12/blart-15460099418p4lc.jpg'
-      :imageDetails="{ name: 'david somebody', location: 'Somewhere in Nigeria' }"
-      />
-      <PictureCard 
-      image='https://media.istockphoto.com/vectors/portrait-of-beautiful-african-woman-in-turban-vector-id486351828?k=6&m=486351828&s=612x612&w=0&h=pfSamk5lBduo3vv8uouCy1rBK4H-kCm2YEikWNC4LDE='
-      :imageDetails="{ name: 'david somebody', location: 'Somewhere in Nigeria' }"
-      />
-      <PictureCard 
-      image='https://answersafrica.com/wp-content/uploads/2013/04/Africa-4.jpg'
-      :imageDetails="{ name: 'david somebody', location: 'Somewhere in Nigeria' }"
-      />
-      <PictureCard 
-      image='https://answersafrica.com/wp-content/uploads/2013/04/Africa-4.jpg'
-      :imageDetails="{ name: 'david somebody', location: 'Somewhere in Nigeria' }"
-      />
-      <PictureCard 
-      image='https://melaninterest.com/wp-content/uploads/2018/12/blart-15460099418p4lc.jpg'
-      :imageDetails="{ name: 'david somebody', location: 'Somewhere in Nigeria' }"
-      />
-      <PictureCard 
-      image='https://media.istockphoto.com/vectors/portrait-of-beautiful-african-woman-in-turban-vector-id486351828?k=6&m=486351828&s=612x612&w=0&h=pfSamk5lBduo3vv8uouCy1rBK4H-kCm2YEikWNC4LDE='
-      :imageDetails="{ name: 'david somebody', location: 'Somewhere in Nigeria' }"
-      />
-      <PictureCard 
-      image='https://answersafrica.com/wp-content/uploads/2013/04/Africa-4.jpg'
-      :imageDetails="{ name: 'david somebody', location: 'Somewhere in Nigeria' }"
-      />
+      <div v-for="picture in pictures" :key="picture">
+        <PictureCard 
+          :image="picture.image"
+          :imageDetails="picture.imageDetails"
+        />
+      </div>
     </div>
     <div :class="{'dont-display': !showModal}">
       <SinglePictureModal
@@ -54,6 +28,44 @@
     },
     data() {
       return {
+        pictures: [
+          { 
+            image:'https://answersafrica.com/wp-content/uploads/2013/04/Africa-4.jpg',
+            imageDetails:{ name: 'david somebody', location: 'Somewhere in Lagos' }
+          },
+          { 
+            image:'https://melaninterest.com/wp-content/uploads/2018/12/blart-15460099418p4lc.jpg',
+            imageDetails:{ name: 'Susan somebody', location: 'Somewhere in Lagos' }
+          },
+          { 
+            image:'https://media.istockphoto.com/vectors/portrait-of-beautiful-african-woman-in-turban-vector-id486351828?k=6&m=486351828&s=612x612&w=0&h=pfSamk5lBduo3vv8uouCy1rBK4H-kCm2YEikWNC4LDE=',
+            imageDetails:{ name: 'Susan somebody', location: 'Somewhere in Lagos' }
+          },
+          { 
+            image:'https://answersafrica.com/wp-content/uploads/2013/04/Africa-4.jpg',
+            imageDetails:{ name: 'david somebody', location: 'Somewhere in Lagos' }
+          },
+          { 
+            image:'https://melaninterest.com/wp-content/uploads/2018/12/blart-15460099418p4lc.jpg',
+            imageDetails:{ name: 'Susan somebody', location: 'Somewhere in Lagos' }
+          },
+          { 
+            image:'https://media.istockphoto.com/vectors/portrait-of-beautiful-african-woman-in-turban-vector-id486351828?k=6&m=486351828&s=612x612&w=0&h=pfSamk5lBduo3vv8uouCy1rBK4H-kCm2YEikWNC4LDE=',
+            imageDetails:{ name: 'Susan somebody', location: 'Somewhere in Lagos' }
+          },
+          { 
+            image:'https://answersafrica.com/wp-content/uploads/2013/04/Africa-4.jpg',
+            imageDetails:{ name: 'david somebody', location: 'Somewhere in Lagos' }
+          },
+          { 
+            image:'https://melaninterest.com/wp-content/uploads/2018/12/blart-15460099418p4lc.jpg',
+            imageDetails:{ name: 'Susan somebody', location: 'Somewhere in Lagos' }
+          },
+          { 
+            image:'https://media.istockphoto.com/vectors/portrait-of-beautiful-african-woman-in-turban-vector-id486351828?k=6&m=486351828&s=612x612&w=0&h=pfSamk5lBduo3vv8uouCy1rBK4H-kCm2YEikWNC4LDE=',
+            imageDetails:{ name: 'Susan somebody', location: 'Somewhere in Lagos' }
+          },
+        ],
         showModal: false,
         image: '',
         imageDetails: ''

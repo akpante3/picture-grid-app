@@ -5,8 +5,8 @@
       <div class="picture-modal-card">
         <img :src="image" />
         <div class="picture-modal-details">
-          <div>{{imageDetails.name}}</div>
-          <div>{{imageDetails.location}}</div>
+          <div class="image-owner">{{imageDetails.name}}</div>
+          <div class="image-location">{{imageDetails.location}}</div>
         </div>
       </div>
   </div>
@@ -62,6 +62,7 @@ export default {
 .picture-modal-details {
   width: 100%;
   background-color: rgb(255, 255, 255);
+  padding: 30px;
 }
 .picture-close-btn {
   font-size: 25px;
@@ -72,6 +73,12 @@ export default {
   right: 4%;
   cursor: pointer;
 }
-
+.picture-modal-details .image-owner {
+  font-weight: 700;
+}
+.picture-modal-details .image-location {
+  font-weight: 200;
+  font-size: 14px;
+}
   /* TRANSITION */
 </style>

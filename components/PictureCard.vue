@@ -28,6 +28,7 @@
   position: relative;
   border-radius: 7px;
   cursor: pointer;
+  height: 100%;
 }
 .image-wrapper:hover .image-overlay {
  transform: translate(0px, 300px);
