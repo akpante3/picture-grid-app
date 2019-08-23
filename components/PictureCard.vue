@@ -29,14 +29,18 @@
   border-radius: 7px;
   cursor: pointer;
   height: 100%;
+  max-height: 100%;
+  overflow: hidden;
 }
 .image-wrapper:hover .image-overlay {
- transform: translate(0px, 300px);
+  --transition-duration: 0.5s;
+ transform: translateY(100%);
+
 }
 .image-overlay {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
   opacity: 1;
   position: absolute;
   color: white;
@@ -54,18 +58,10 @@
   font-weight: 200;
   font-size: 14px;
 }
-.picture-grid img {
+.image-wrapper img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
-.picture-grid .image-wrapper {
-  max-height: 100%;
-  overflow: hidden;
-}
-.picture-grid > div:nth-child(odd) {
-  grid-row-end: span 10;
-}
-.picture-grid > div:nth-child(even) {
-  grid-row-end: span 9;
-}
+
 </style>

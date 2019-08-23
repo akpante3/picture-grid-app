@@ -1,6 +1,6 @@
 <template>
 <div class="">
-  <div class="picture-modal-mask">
+  <div class="picture-modal-mask" @click.self="togglePictureModal">
       <span class="picture-close-btn" @click="togglePictureModal">&#10005;</span>
       <div class="picture-modal-card">
         <img :src="image" />
@@ -14,21 +14,19 @@
 </template>
 
 <script>
-
-
-export default {
-  name: 'SinglePictureModal',
-  components: {},
-  data() {
-    return {}
-  },
-  methods: {
-    togglePictureModal() {
-      this.$parent.togglePictureModal();
+  export default {
+    name: 'SinglePictureModal',
+    components: {},
+    data() {
+      return {}
     },
-  },
-  props:['image', 'imageDetails']
-};
+    methods: {
+      togglePictureModal() {
+        this.$parent.togglePictureModal();
+      },
+    },
+    props:['image', 'imageDetails']
+  };
 </script>
 
 <style scoped>
@@ -46,8 +44,8 @@ export default {
   transition: opacity 0.2s;
 }
 .picture-modal-mask .picture-modal-card {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   border: 1px solid whitesmoke;
   display: grid;
   grid-template-rows: 80% 20%;
@@ -58,6 +56,7 @@ export default {
 .picture-modal-mask img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .picture-modal-details {
   width: 100%;
