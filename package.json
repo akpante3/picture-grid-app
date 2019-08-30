@@ -7,7 +7,6 @@
   "scripts": {
     "test": "jest",
     "dev": "nuxt",
-    "build": "nuxt build",
     "start": "nuxt",
     "generate": "nuxt generate"
   },
