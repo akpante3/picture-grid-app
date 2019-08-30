@@ -7,8 +7,9 @@
   "scripts": {
     "test": "jest",
     "dev": "nuxt",
-    "start": "nuxt",
-    "generate": "nuxt generate"
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.10.1",
