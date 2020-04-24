@@ -9,7 +9,7 @@
           v-model="search"
         >
       </div>
-       <div v-if="searchEnabled" class="search-label">Search result for <span>"{{ search }}"</span> <span class="close-search" @click="toggleSearch">&#10005;</span></div>
+       <div v-if="searchEnabled" class="search-label">Search result for <span>"{{ search }}"</span> <span class="close-search" @click="toggleSearch" style="cursor:pointer">&#10005;</span></div>
     </div>
     <div class="container-picture-grid">
       <PictureGrid />
@@ -41,6 +41,7 @@ export default {
     },
     toggleSearch () {
       this.searchEnabled = !this.searchEnabled;
+      this.$store.dispatch('pictures/get')
     }
 
   }
