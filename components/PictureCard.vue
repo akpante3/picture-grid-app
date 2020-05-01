@@ -32,6 +32,7 @@
   max-height: 100%;
   overflow: hidden;
 }
+
 .image-wrapper:hover .image-overlay {
   --transition-duration: 0.5s;
  transform: translateY(100%);
@@ -45,6 +46,7 @@
   position: absolute;
   color: white;
   padding: 5%;
+  cursor: pointer;
 }
 .image-overlay .image-user-details {
   position: absolute;

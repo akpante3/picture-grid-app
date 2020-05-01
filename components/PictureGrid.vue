@@ -4,7 +4,7 @@
       <Spinner />
     </div>
     <div class="picture-grid" v-if="!loading">
-      <div v-for="picture in pictures" :key="picture.image">
+      <div v-for="picture in pictures" :key="picture.image" id="card-wrapper">
         <PictureCard 
           :image="picture.urls.regular"
           :imageDetails="picture.user"
